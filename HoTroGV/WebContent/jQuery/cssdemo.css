@@ -1,0 +1,103 @@
+.container>.navbar-header{
+	margin-right: 0px;
+  	margin-left: -15px;
+  	margin-top: 100px;
+}
+.container0{background-color: #F7F2E0;}
+.stw{
+	text-align: center;
+	font-family: time roman;
+	color: blue;
+	font-size:30;
+}
+.stw2{
+	text-align: center;
+	font-family: time roman;
+	color: red;
+	font-size: 15;
+	margin-top: 30;
+}
+
+.home{margin-right: 10;}
+.nav-tabs {
+  border-bottom: 1px solid #ddd;
+  padding-left: 200;
+  margin-top: 33;
+  background-color: #F7F2E0;
+}
+
+.nav-tabs > li > a {
+    box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+    background: #ad1c1c;
+    background: linear-gradient(220deg, transparent 10px, #ad1c1c 20px);
+    text-shadow: 0 8px 0 rgba(0,0,0,.5);
+    color: #fff;
+    float: left;
+    font: bold 12px/35px 'Lucida sans', Arial, Helvetica;
+    height: 35px;
+    padding: 0 30px;
+    text-decoration: none;
+}
+.tab-content {
+    background-color: #fff;
+    padding: 50px;
+}
+
+
+.tab-container {
+        border: 1px solid #999999;
+        border-top: none;
+        clear: both;
+        float: left;
+        width: 100%;
+        background: #FFFFFF;
+}
+
+ 
+ 
+.nav-tabs a:hover {
+    background: #c93434;
+    background: linear-gradient(220deg, transparent 10px, #c93434 10px);
+    border-color: #eee #eee #ddd;
+}
+ 
+.nav-tabs a:focus {
+    outline: 0;
+}
+ 
+ /*hieu chih mo tab dau tien*/
+.nav-tabs #current a {
+    background: #fff;
+    background: linear-gradient(220deg, transparent 10px, #fff 10px);
+    text-shadow: none;
+    color: #333;
+}
+
+.nav-stacked {
+ display:inline-block;
+    width:20%;
+    margin:0px auto;
+    padding:0;
+    background:#335599 repeat-x 0 -110px;
+    border-radius:20px; /*chinh bo tron`*/
+
+  }
+
+.nav-stacked > li > a {
+font-weight:bold;
+    color:#e7e5e5;
+    display:block;
+    padding:8px 20px;
+    border-radius:20px; /*chinh bo tron`*/
+    text-shadow:0 2px 2px rgba(0,0,0, .7);
+
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  font-size: 15;
+  padding-left: 30px;
+  padding-right: 30px;
+}

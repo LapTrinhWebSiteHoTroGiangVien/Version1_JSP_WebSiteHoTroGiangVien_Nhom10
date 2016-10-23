@@ -1,0 +1,107 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="E:\Lap trinh web\bootstrap\css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="E:\Lap trinh web\cssdemo.css">
+	<script src="E:\Lap trinh web\Jquery\jquery-3.1.1.js"></script>
+	<script src="E:\Lap trinh web\js.js"></script>
+	<script src="E:\Lap trinh web\bootstrap\js\bootstrap.js"></script>
+	<script src="E:\Lap trinh web\form.js"></script>
+
+</head>
+<body class="container0">
+	<div class="container">
+		<p class="stw">WELCOME TO MY WEBSITE</p>
+		<div class="row">
+			<div class="navbar-header">
+				<div class="row">
+					<img src="C:\Users\phuoc\Desktop\hcmute.png" class="col-lg-2 col-md-3 col-md-offset-3"/>
+					<img src="https://web-school.in/wp-content/uploads/2014/01/teacher.png" class="col-lg-2 col-md-3 col-md-offset-0"/>
+					<div class="col-lg-5 col-md-3 col-md-offset-0" >
+						<p class="stw2">
+						Giảng Viên Nguyễn Văn ABC<br>
+						Trường ĐH SPKT TPHCM
+						</p>
+					</div>					
+				</div>				
+			</div>			
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#loginModal">Login</button>
+				<div class="modal fade" data-keyboard="false" data-backdrop="static" id="loginModal" tabindex="-1">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Login</h4>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<input checked="checked" name="chucvu" type="radio" value="Giảng viên">Giảng viên
+										<input name="chucvu" type="radio" value="Sinh viên">Sinh Viên
+									</div>
+									<div>
+										<label for="inputUserName">Username</label>
+										<input  type="text" id="inputUserName">
+									</div>
+									<div>
+										<label for="inputPassword">Password</label>
+										<input  type="text" id="inputPassword">
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-primary">Login</button>
+								<button class="btn btn-primary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+
+			<ul class="nav nav-tabs">
+				<li><a href="#" data-toggle="tab">Trang chu</a></li>
+		  		<li><a href="#" title="hs">Hồ sơ</a></li>
+		  		<li><a href="#" title="nc" data-toggle="tab">Nghiên cứu</a></li>
+		  		<li><a href="#" title="ap" data-toggle="tab">Ấn phẩm</a></li>
+				<li><a href="#" title="kh" data-toggle="tab">Khóa học</a></li>
+				<li><a href="#" title="trtt" data-toggle="tab">Trao đổi/Tương tác</a></li>
+			</ul>
+			<div class="tab-container">
+				<div class="tab-content">
+					<div class="tab-pane" id="hs">
+						<ul class="nav nav-stacked">
+							<li><a href="#" data-toggle="tab">Thông tin cá nhân</a></li>
+					  		<li><a href="#" title="hs2">Trình độ</a></li>
+					  		<li><a href="#" title="nc2" data-toggle="tab">Chức vụ</a></li>
+					  		<li><a href="#" title="ap2" data-toggle="tab">Danh hiệnu/Giải thưởng</a></li>
+							<li><a href="#" title="kh2" data-toggle="tab">Sở thích</a></li>
+						</ul>
+						<div class="tab-container">
+							<div class="tab-content">
+								<div class="tab-pane" id="nc2"><strong>sddf</strong></div>
+								<div class="tab-pane" id="ap2"><strong>vvvv</strong></div>
+								<div class="tab-pane" id="kh2"><strong>ccc</strong></div>
+								<div class="tab-pane" id="trtt2"><strong>eee</strong></div>
+							</div>
+
+						</div>
+					</div>
+					<div class="tab-pane" id="nc"><strong>2013....</strong></div>
+					<div class="tab-pane" id="ap"><strong>vvvv</strong></div>
+					<div class="tab-pane" id="kh"><strong>ccc</strong></div>
+					<div class="tab-pane" id="trtt"><strong>eee</strong></div>
+				</div>
+							  
+			</div>
+
+		</div>
+		
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿header .logo h1 {
+  font-size: 25px;
+}
+
+#wrapper .content .slider img {
+  width: 100%;
+  height: auto;
+}
+footer {
+  background: #2E2E2E;
+  color: #fff;
+  padding: 20px;
+
+}
+ .modal-header{
+          background-color: green;
+          color: white;                
+      }     

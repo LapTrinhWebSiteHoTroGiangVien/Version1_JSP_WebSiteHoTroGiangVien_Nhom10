@@ -22,34 +22,34 @@
   <script type="text/javascript">
       function Login(){
         var flag = true;
-        var tk = document.getElementById('user').value;
-        var mk = document.getElementById('pass').value;
+        var tk = document.getElementById('user');
+        var mk = document.getElementById('pass');
         var gv = document.getElementById('checkGV').checked;
         var sv = document.getElementById('checkSV').checked;
 
-        if (tk == "") {
+        if (tk.value == "") {
           document.getElementById('user').innerHTML ="<img src=<img src='http://www.javatpoint.com/javascriptpages/images/unchecked.gif'/>"
           document.getElementById('error-user').innerHTML = "Vui lòng nhập tài khoản"
-          user.style.borderColor="red";
+          tk.style.borderColor="red";
           flag = false;
         }
         else{
           
           document.getElementById('error-user').innerHTML ="";
-          user.style.borderColor = "green"
+          tk.style.borderColor = "green"
         }
-        if (mk == "") {
+        if (mk.value == "") {
           document.getElementById('error-pass').innerHTML = "Vui lòng nhập mật khẩu"
-          pass.style.borderColor="red";
+          mk.style.borderColor="red";
           flag = false;
         }
-        else if(mk.length < 8){
+        else if(mk.value.length < 8){
           document.getElementById('error-pass').innerHTML = "Mật khẩu phải từ 8 kí tự trở lên";
           flag = false;
         }
         else{
           document.getElementById('error-pass').innerHTML ="";
-          pass.style.borderColor = "#ccc"
+          mk.style.borderColor = "#ccc"
         }
 
         if(gv == false && sv == false)

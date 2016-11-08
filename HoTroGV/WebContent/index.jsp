@@ -24,8 +24,8 @@
         var flag = true;
         var tk = document.getElementById('user');
         var mk = document.getElementById('pass');
-        var gv = document.getElementById('checkGV').checked;
-        var sv = document.getElementById('checkSV').checked;
+        var gv = document.getElementById('checkedGV').checked;
+        var sv = document.getElementById('checkedSV').checked;
 
         if (tk.value == "") {
           document.getElementById('user').innerHTML ="<img src=<img src='http://www.javatpoint.com/javascriptpages/images/unchecked.gif'/>"
@@ -60,13 +60,6 @@
         {
             document.getElementById('truycap').innerHTML = ""
          }
-
-        if(flag == true && sv == true && gv == false){
-          window.location = "SinhVien_TrangChu.jsp";
-        }
-        if(flag == true && gv == true && sv == false){
-          window.location = "GV_TrangChu.jsp";
-        }
         return flag;
       }
       
@@ -142,7 +135,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li>
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" style="margin: 8px; margin-right: 23px"><span class="glyphicon glyphicon-log-out"></span> Đăng nhập</button>
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ModalLogin" style="margin: 8px; margin-right: 23px"><span class="glyphicon glyphicon-log-out"></span> Đăng nhập</button>
             </li>
         </ul>
       </div>
@@ -288,7 +281,7 @@
   </div> <!--Kết thúc container tài liệu-->
 
   <!-- Modal đăng nhập -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="ModalLogin" role="dialog">
     <div class="modal-dialog modal-sm">                                    
       <!-- Modal content-->
       <div class="modal-content">
@@ -297,23 +290,23 @@
             <h4 class="modal-title" style="text-align: center;  font-size: 40px;">Login</h4>
         </div>
         <div class="modal-body">
-            <div class="row" align="center">                                         
-                <input  id="checkGV" type="radio" name="same" value="Giảng Viên"> Giảng Viên                                        
-                <input  id="checkSV" type="radio" name = "same" value="Sinh Vien" > Sinh Viên
-                <div id="truycap" style="color: red; font-style: italic;"></div>                  
-            </div>
-            <form class="form-horizontal" >
-                <div class="form-group" ">
+            <form class="form-horizontal" action="LoginServlet" method="post">
+            	<div class="form-group" align="center">                                         
+	                <input type="radio" id="checkedGV" name="checkedGV" value="Giảng Viên"> Giảng Viên                                        
+	                <input type="radio" id="checkedSV" name = "checkedSV" value="Sinh Vien" > Sinh Viên
+	                <div id="truycap" style="color: red; font-style: italic;"></div>                  
+            	</div>
+                <div class="form-group">
                   <label class="control-label col-md-7 " style="text-align: left">Tên đăng nhập</label>
                   <div class="col-md-12">
-                    <input type="text" class="form-control" placeholder="Enter UserName " id="user">
+                    <input type="text" class="form-control" placeholder="Enter UserName" id="user" name="user">
                     <div id ="error-user" style="color: red; font-style: italic;"></div> 
                   </div>
                 </div>
-                <div class="form-group" ">
+                <div class="form-group">
                   <label class="control-label col-md-12" style="text-align: left">Mật khẩu</label>
                   <div class="col-md-12" >
-                    <input type="password" class="form-control" placeholder="Enter Password " id ="pass">
+                    <input type="password" class="form-control" placeholder="Enter Password" id="pass" name ="pass">
                     <div id="error-pass" style="color: red; font-style: italic;"></div>
                   </div>
                 </div>

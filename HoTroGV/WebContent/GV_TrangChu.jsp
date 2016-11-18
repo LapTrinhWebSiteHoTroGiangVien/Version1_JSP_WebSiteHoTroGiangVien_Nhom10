@@ -40,8 +40,11 @@
           <li><a href="GV_TinNhanDaNhan.jsp">Tin nhắn</a></li>
           <li><a href="GV_ThaoLuan.jsp">Thảo luận</a></li>
         </ul>
+        <%
+        String user = request.getParameter("user");
+        %>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="GV_ThongTinCaNhan.jsp"><span class="glyphicon glyphicon-user"></span>  Xin chào Đặng Thị Kim Giao</a></li>
+          <li><a href="GV_ThongTinCaNhan.jsp"><span class="glyphicon glyphicon-user"></span>  Xin chào <%=user%></a></li>
           <li><a href="index.jsp"><span class="glyphicon glyphicon-log-in"></span> Đăng xuất</a></li>
         </ul>
       </div>

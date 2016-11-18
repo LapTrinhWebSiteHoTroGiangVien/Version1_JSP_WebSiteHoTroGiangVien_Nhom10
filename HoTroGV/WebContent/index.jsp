@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>   
+<sql:setDataSource 
+	driver="com.mysql.jdbc.Driver"
+	url="jdbc:mysql://localhost/danhom10_web"
+	user=" root"
+	password=""
+/>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -24,8 +32,8 @@
         var flag = true;
         var tk = document.getElementById('user');
         var mk = document.getElementById('pass');
-        var gv = document.getElementById('checkedGV').checked;
-        var sv = document.getElementById('checkedSV').checked;
+        var gv = document.getElementById('checkGV').checked;
+        var sv = document.getElementById('checkSV').checked;
 
         if (tk.value == "") {
           document.getElementById('user').innerHTML ="<img src=<img src='http://www.javatpoint.com/javascriptpages/images/unchecked.gif'/>"
@@ -60,7 +68,15 @@
         {
             document.getElementById('truycap').innerHTML = ""
          }
+
+        /*if(flag == true && sv == true && gv == false){
+          window.location = "Sinh.jsp";
+        }
+        if(flag == true && gv == true && sv == false){
+          window.location = "LoginBean.jsp";
+        }
         return flag;
+      }*/
       }
       
       function clickForget(){
@@ -135,7 +151,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li>
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ModalLogin" style="margin: 8px; margin-right: 23px"><span class="glyphicon glyphicon-log-out"></span> Đăng nhập</button>
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" style="margin: 8px; margin-right: 23px"><span class="glyphicon glyphicon-log-out"></span> Đăng nhập</button>
             </li>
         </ul>
       </div>
@@ -281,7 +297,7 @@
   </div> <!--Kết thúc container tài liệu-->
 
   <!-- Modal đăng nhập -->
-  <div class="modal fade" id="ModalLogin" role="dialog">
+  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-sm">                                    
       <!-- Modal content-->
       <div class="modal-content">
@@ -289,24 +305,25 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title" style="text-align: center;  font-size: 40px;">Login</h4>
         </div>
+        <form action="loginsevlet" method="post">
         <div class="modal-body">
-            <form class="form-horizontal" action="LoginServlet" method="post">
-            	<div class="form-group" align="center">                                         
-	                <input type="radio" id="checkedGV" name="checkedGV" value="Giảng Viên"> Giảng Viên                                        
-	                <input type="radio" id="checkedSV" name = "checkedSV" value="Sinh Vien" > Sinh Viên
-	                <div id="truycap" style="color: red; font-style: italic;"></div>                  
-            	</div>
-                <div class="form-group">
+            <div class="row" align="center">                                         
+                <input  id="checkGV" type="radio" name="same" value="Giảng Viên"> Giảng Viên                                        
+                <input  id="checkSV" type="radio" name = "same" value="Sinh Vien" > Sinh Viên
+                <div id="truycap" style="color: red; font-style: italic;"></div>                  
+            </div>
+           
+                <div class="form-group" >
                   <label class="control-label col-md-7 " style="text-align: left">Tên đăng nhập</label>
                   <div class="col-md-12">
-                    <input type="text" class="form-control" placeholder="Enter UserName" id="user" name="user">
+                    <input name="username" type="text" class="form-control" placeholder="Enter UserName " id="user">
                     <div id ="error-user" style="color: red; font-style: italic;"></div> 
                   </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" ">
                   <label class="control-label col-md-12" style="text-align: left">Mật khẩu</label>
                   <div class="col-md-12" >
-                    <input type="password" class="form-control" placeholder="Enter Password" id="pass" name ="pass">
+                    <input name="password" type="password" class="form-control" placeholder="Enter Password " id ="pass">
                     <div id="error-pass" style="color: red; font-style: italic;"></div>
                   </div>
                 </div>
@@ -320,12 +337,16 @@
                     <a href="#" class="forget" onclick="clickForget()">Quên mật khẩu?</a>
                   </div>
                 </div>
-            </form>
+                  <div class="modal-footer">
+                <button type="submit" class="btn btn-success" onclick="">Login</button>
+           		 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+           		  </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" onclick="Login()">Login</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        </div>
+         </form>
+      
+          
+         
+       
       </div>                                      
     </div>
   </div><!-- Kết thúc modal đăng nhập -->

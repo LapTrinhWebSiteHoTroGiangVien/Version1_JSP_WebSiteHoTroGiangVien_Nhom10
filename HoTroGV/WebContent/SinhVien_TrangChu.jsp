@@ -72,7 +72,10 @@
               <li><a href="SinhVien_TinNhanDaNhan.jsp">Tin nhắn</a></li> 
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="SinhVien_TTCN.jsp"><span class="glyphicon glyphicon-user"></span> Xin chào, Nguyễn Đức Ngưu</a></li>
+          <%
+          	String user=request.getParameter("user");
+          %>
+            <li><a href="SinhVien_TTCN.jsp"><span class="glyphicon glyphicon-user"></span> Xin chào <%=user %></a></li>
             <li><a href="index.jsp"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a></li>
           </ul>
         </div>
